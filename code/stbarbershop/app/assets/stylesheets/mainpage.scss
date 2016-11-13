@@ -1,0 +1,114 @@
+$banner-height: 500px;
+$background-color: #008000;
+$navbar-color: #00CED1;
+$promo-header-color: #ff5c93;
+$section-height: 200px;
+$footer-color: #00CED1;
+$news-height: $section-height;
+$about-height: $section-height;
+$prices-height: $section-height;
+$contacts-height: $section-height;
+$navbar-height: 80px;
+$footer-height: 80px;
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    padding-top: $navbar-height;
+    font-size: 10px;
+}
+
+nav {
+    overflow: hidden;
+    background: $navbar-color;
+    padding: 0;
+    height: $navbar-height;
+
+    .navbar-brand {
+        margin-top: 5px;
+        padding: 0;
+    }
+
+    a {
+        line-height: $navbar-height/2 !important;
+        color: #ffffff;
+    }
+
+    ul {
+        a {
+            height: $navbar-height;
+            font-size: 2.5rem;
+            &:hover {}
+        }
+    }
+}
+
+main {
+    // background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    min-height: 100%;
+    padding: 0 0 $footer-height !important;
+
+    .container {
+
+    }
+
+    .promo {
+        color: $promo-header-color;
+        text-align: center;
+
+        h2 {}
+
+        h3 {}
+    }
+
+    .banner {
+        // .carousel {
+        height: $banner-height;
+
+        img {
+            width: 100%;
+            height: $banner-height;
+        }
+        // }
+    }
+
+    .news {
+        min-height: $news-height;
+
+        header {}
+    }
+
+    .prices {
+        min-height: $prices-height;
+
+        header {}
+    }
+
+    .contacts {
+        min-height: $contacts-height;
+
+        header {}
+    }
+
+    .about {
+        min-height: $about-height;
+
+        header {}
+    }
+
+    section:last-child {
+        header {}
+    }
+}
+
+footer {
+    background: $footer-color;
+    height: $footer-height;
+    margin-top: -$footer-height;
+}
