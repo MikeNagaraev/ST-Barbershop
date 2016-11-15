@@ -53,3 +53,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem "font-awesome-rails"
 
 gem 'rails_12factor', group: :production
+
+gem 'cancancan'
+gem 'rolify'
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'

@@ -1,42 +1,4 @@
-<nav class="navbar navbar-fixed-top">
-    <div class="row">
-        <div class="col-md-3 col-md-offset-1">
-            <div class="navbar-header">
-                <a class="navbar-brand"><%= image_tag("small-logo.png", alt: "logo" )%></a>
-            </div>
-        </div>
 
-        <div class="col-md-7">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#news">Новости</a>
-                </li>
-                <li>
-                    <a href="#prices">Цены</a>
-                </li>
-                <li>
-                    <a href="#contacts">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>Контакты</a>
-                </li>
-                <li>
-                    <a href="#about">О Нас</a>
-                </li>
-                <% if current_user %>
-                <li>
-                    <a href="">
-                        <i class="fa fa-user" aria-hidden="true"></i>Мой Профиль</a>
-                <li>
-                <% else %>
-                <li>
-                    <a href="">
-                        <i class="fa fa-sign-in" aria-hidden="true"></i>Войти</a>
-                <li>
-                    <% end %>
-            </ul>
-        </div>
-
-    </div>
-</nav>
 <main class="container-fluid">
     <section class="banner">
         <div class="promo">

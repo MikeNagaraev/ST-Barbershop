@@ -1,0 +1,30 @@
+@import "variables";
+nav {
+    overflow: hidden;
+    background: $navbar-color;
+    padding: 0;
+    height: $navbar-height;
+
+    .navbar-header {
+        line-height: $navbar-height/2 !important;
+        padding: 0;
+    }
+
+    a {
+        line-height: $navbar-height/2 !important;
+        color: #ffffff;
+    }
+
+    ul {
+        a {
+            height: $navbar-height;
+            font-size: 1.3rem;
+
+            i {
+                margin-right: 10px;
+            }
+
+            &:hover {}
+        }
+    }
+}

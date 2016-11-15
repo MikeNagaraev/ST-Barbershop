@@ -1,29 +1,4 @@
-$banner-height: 1000px;
-$white: #ffffff;
-$background-color: #008000;
-$navbar-color: #000000;
-$promo-header-color: $white;
-$section-height: 200px;
-$footer-color: #000000;
-$news-height: $section-height;
-$about-height: $section-height;
-$prices-height: $section-height;
-$contacts-height: $section-height;
-$navbar-height: 70px;
-$footer-height: 120px;
-$section-color2: lighten(#e4e4e4,8%);
-$icon-height: 60px;
-$icon-width: 60px;
-$icon-color: $white;
-$extra-color: #ff5c93;
-$extra-color-second: #93D2F0;
-$news-icon-width: 70px;
-$news-icon-height: 70px;
-$btn-enroll-width: 500px;
-$btn-enroll-height: 100px;
-$btn-enroll-color: #F0E68C;
-@import url( 'https://fonts.googleapis.com/css?family=Walter+Turncoat|Neucha');
-
+@import "variables";
 body,
 html {
     height: 100%;
@@ -32,6 +7,7 @@ html {
 
 body {
     padding-top: $navbar-height;
+    font-family: $main-font !important;
 
     .icon {
         background-color: $icon-color;
@@ -54,31 +30,7 @@ body {
     }
 }
 
-nav {
-    overflow: hidden;
-    background: $navbar-color;
-    padding: 0;
-    height: $navbar-height;
 
-    .navbar-header {
-        line-height: $navbar-height/2 !important;
-        padding: 0;
-    }
-
-    a {
-        line-height: $navbar-height/2 !important;
-        color: #ffffff;
-    }
-
-    ul {
-        a {
-            height: $navbar-height;
-            font-size: 1.3rem;
-
-            &:hover {}
-        }
-    }
-}
 
 main {
     background-repeat: no-repeat;
@@ -107,7 +59,7 @@ main {
                 h1 {
                     margin: 0;
                     letter-spacing: 0.7rem;
-                    text-shadow: -3px 3px 3px black;
+                    text-shadow: -5px 3px 3px black;
                     font-size: 9rem;
                     font-family: Walter Turncoat;
                 }
@@ -115,7 +67,8 @@ main {
                 h2 {
                     text-shadow: -3px 3px 3px black;
                     font-size: 3rem;
-                    font-family: Sans;
+                    letter-spacing: 4px;
+                    font-family: Neucha;
                 }
             }
         }
@@ -169,7 +122,7 @@ main {
 
         .title {
             h2 {
-                margin: 0;
+                margin: 0 0 10px;
             }
         }
 

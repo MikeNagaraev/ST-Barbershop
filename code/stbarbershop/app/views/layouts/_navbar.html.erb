@@ -1,0 +1,45 @@
+<nav class="navbar navbar-fixed-top">
+    <div class="row">
+        <div class="col-md-3 col-md-offset-1">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="<%=root_path%>"><%= image_tag("small-logo.png", alt: "logo" )%></a>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#news"><i class="fa fa-newspaper-o" aria-hidden="true"></i>Новости
+                    </a>
+                </li>
+                <li>
+                    <a href="#prices"><i class="fa fa-usd" aria-hidden="true"></i>Цены
+                    </a>
+                </li>
+                <li>
+                    <a href="#contacts">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>Контакты
+                    </a>
+                </li>
+                <li>
+                    <a href="#about"><i class="fa fa-users" aria-hidden="true"></i>О Нас
+                    </a>
+                </li>
+                <% if current_user %>
+                <li>
+                    <a href="<%= user_path(current_user)%>">
+                        <i class="fa fa-user" aria-hidden="true"></i>Мой Профиль
+                    </a>
+                </li>
+            <% else %>
+                <li>
+                    <a href="<%=new_user_session_path%>">
+                        <i class="fa fa-sign-in" aria-hidden="true"></i>Войти
+                    </a>
+                </li>
+                <% end %>
+            </ul>
+        </div>
+
+    </div>
+</nav>
