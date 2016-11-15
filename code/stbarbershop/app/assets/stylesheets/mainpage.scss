@@ -9,13 +9,20 @@ $news-height: $section-height;
 $about-height: $section-height;
 $prices-height: $section-height;
 $contacts-height: $section-height;
-$navbar-height: 80px;
+$navbar-height: 70px;
 $footer-height: 120px;
 $section-color2: lighten(#e4e4e4,8%);
 $icon-height: 60px;
 $icon-width: 60px;
 $icon-color: $white;
 $extra-color: #ff5c93;
+$extra-color-second: #93D2F0;
+$news-icon-width: 70px;
+$news-icon-height: 70px;
+$btn-enroll-width: 500px;
+$btn-enroll-height: 100px;
+$btn-enroll-color: #F0E68C;
+@import url( 'https://fonts.googleapis.com/css?family=Walter+Turncoat|Neucha');
 
 body,
 html {
@@ -25,6 +32,26 @@ html {
 
 body {
     padding-top: $navbar-height;
+
+    .icon {
+        background-color: $icon-color;
+        display: inline-block;
+        border-radius: 50%;
+        text-align: center;
+        position: relative;
+
+        &:hover {
+            background: darken($icon-color, 20%);
+        }
+
+        i {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            color: #000000;
+        }
+    }
 }
 
 nav {
@@ -46,7 +73,7 @@ nav {
     ul {
         a {
             height: $navbar-height;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
 
             &:hover {}
         }
@@ -62,7 +89,7 @@ main {
 
     .banner {
         height: $banner-height;
-        background: url("banner.jpg");
+        background: image-url("banner.jpg");
         background-repeat: no-repeat;
         background-size: 100% 100%;
         position: relative;
@@ -71,21 +98,84 @@ main {
             color: $promo-header-color;
             text-align: center;
             position: absolute;
-            right: 30%;
-            top: 30%;
+            right: 7%;
+            top: 15%;
 
-            h1 {
-                margin: 0;
+            header {
+                transform: rotate(14deg);
+
+                h1 {
+                    margin: 0;
+                    letter-spacing: 0.7rem;
+                    text-shadow: -3px 3px 3px black;
+                    font-size: 9rem;
+                    font-family: Walter Turncoat;
+                }
+
+                h2 {
+                    text-shadow: -3px 3px 3px black;
+                    font-size: 3rem;
+                    font-family: Sans;
+                }
+            }
+        }
+
+        .button-enroll {
+            position: absolute;
+            bottom: 30%;
+            right: 20%;
+            width: $btn-enroll-width;
+            height: $btn-enroll-height;
+            background: $btn-enroll-color;
+            color: #000000;
+            box-shadow: 5px -5px 5px lighten(#000000,10%);
+            border-radius: 20px;
+            text-align: center;
+            text-decoration: none;
+            font-family: Neucha;
+
+            &:hover {
+                background: darken($btn-enroll-color,20%);
             }
 
-            h2 {}
+            .text {
+                &-up {
+                    letter-spacing: 2px;
+                    font-weight: bold;
+                    margin: -5px 0 -20px;
+                    font-size: 2.8rem;
+                }
+
+                &-down {
+                    font-size: 1.5rem;
+                }
+            }
         }
     }
 
     .news {
         min-height: $news-height;
+        padding: 40px;
 
-        header {}
+        header {
+            margin-bottom: 40px;
+        }
+
+        .icon {
+            width: $news-icon-width;
+            height: $news-icon-height;
+            background: $extra-color-second;
+        }
+
+        .title {
+            h2 {
+                margin: 0;
+            }
+        }
+
+        .description {
+            p {}
+        }
     }
 
     .prices {
@@ -112,11 +202,11 @@ main {
         }
 
         header {
-          h2 {
-              font-size: 2rem;
-              text-align: center;
-              margin: 0;
-          }
+            h2 {
+                font-size: 2rem;
+                text-align: center;
+                margin: 0;
+            }
         }
     }
 }
@@ -149,8 +239,9 @@ footer {
             font-weight: bold;
             color: $extra-color;
             text-decoration: none;
+
             &:hover {
-             color: darken($extra-color,10%);
+                color: darken($extra-color,10%);
             }
         }
     }
@@ -172,21 +263,8 @@ footer {
         }
 
         .icon {
-            height: $icon-height;
-            display: inline-block;
             width: $icon-width;
-            border-radius: 50%;
-            background-color: $icon-color;
-            text-align: center;
-
-            &:hover {
-                background: darken($icon-color, 20%);
-            }
-
-            i {
-                line-height: $icon-height;
-                color: #000000;
-            }
+            height: $icon-height;
         }
     }
 }
