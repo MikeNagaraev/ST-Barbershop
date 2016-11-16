@@ -1,10 +1,44 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      
+<main class="user-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="#" class="btn btn-danger btn-block btn-enroll">Записаться</a>
+                <ul class="nav nav-pills nav-stacked nav-menu shadow mb-20">
+                    <li class="active">
+                        <a href="#" data-target-id="profile">
+                            <i class="fa fa-user"></i>
+                            Мой профиль
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-target-id="statistics">
+                            <i class="fa  fa-line-chart"></i>
+                            Статистика
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-target-id="settings">
+                            <i class="fa fa-pencil-square-o"></i>Настройки
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-sign-out"></i>
+                            Выход
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="admin-content" id="profile">
+                <%= render "users/profile" %>
+            </div>
+            <div class="admin-content" id="statistics">
+                <%= render "users/statistics" %>
+            </div>
+            <div class="admin-content" id="settings"></div>
+            <div class="admin-content" id="schedule">
+                <%= render "users/schedule" %>
+            </div>
+        </div>
     </div>
-    <div class="col-md-8">
-
-    </div>
-  </div>
-</div>
+</main>

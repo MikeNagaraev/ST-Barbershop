@@ -1,4 +1,5 @@
 @import "variables";
+
 body,
 html {
     height: 100%;
@@ -7,30 +8,27 @@ html {
 
 body {
     padding-top: $navbar-height;
-    font-family: $main-font !important;
-
-    .icon {
-        background-color: $icon-color;
-        display: inline-block;
-        border-radius: 50%;
-        text-align: center;
-        position: relative;
-
-        &:hover {
-            background: darken($icon-color, 20%);
-        }
-
-        i {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%,-50%);
-            color: #000000;
-        }
-    }
 }
 
+.icon {
+    background-color: $icon-color;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
 
+    &:hover {
+        background: darken($icon-color, 20%);
+    }
+
+    i {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        color: #000000;
+    }
+}
 
 main {
     background-repeat: no-repeat;

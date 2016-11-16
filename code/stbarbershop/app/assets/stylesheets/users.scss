@@ -1,0 +1,118 @@
+.user-page {
+    background: #cef8f5;
+
+    .container .row {
+        margin-top: 50px;
+    }
+
+    .btn-enroll {
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
+
+    .btn-danger {
+        background-color: #E9573F;
+        border-color: #E9573F;
+        color: white;
+    }
+
+    .panel .panel-heading {
+        padding: 5px;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        border-bottom: 1px solid #DDD;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+    }
+
+    .panel .panel-heading .panel-title {
+        padding: 10px;
+        font-size: 17px;
+    }
+
+    .avatar-side {
+        .avatar {
+            margin-bottom: 20px;
+        }
+
+        .btn-group {
+            margin-bottom: 20px;
+        }
+    }
+
+    .nav-menu > li:first-child + li:active {
+        margin-top: 0;
+    }
+
+    .nav-menu > li + li {
+        margin-top: 1px;
+    }
+
+    .nav-menu li {
+        background-color: white;
+    }
+
+    .nav-menu li.active {
+        background-color: transparent;
+    }
+
+    .nav-menu li.active .label {
+        background-color: white;
+        color: black;
+    }
+
+    .nav-menu li a {
+        color: black;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+    }
+
+    .nav-menu li a:hover {
+        background-color: #EEEEEE;
+    }
+
+    .nav-menu li a i {
+        margin-right: 5px;
+    }
+
+    .nav-menu li a .label {
+        margin-top: -1px;
+    }
+
+    .page-header {
+        text-align: center;
+    }
+
+    .bs-callout {
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-top-colors: none;
+        border-color: #eee;
+        border-image: none;
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 1px 1px 1px 5px;
+        margin-bottom: 5px;
+        padding: 20px;
+    }
+
+    .bs-callout:last-child {
+        margin-bottom: 0;
+    }
+
+    .bs-callout h4 {
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+
+    .bs-callout-danger {
+        border-left-color: #d9534f;
+    }
+
+    .bs-callout-danger h4 {
+        color: #d9534f;
+    }
+}

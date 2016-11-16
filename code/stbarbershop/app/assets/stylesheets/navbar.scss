@@ -4,7 +4,7 @@ nav {
     background: $navbar-color;
     padding: 0;
     height: $navbar-height;
-
+    font-family: $main-font !important;
     .navbar-header {
         line-height: $navbar-height/2 !important;
         padding: 0;
