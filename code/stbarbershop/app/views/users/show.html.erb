@@ -2,7 +2,9 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                <a href="#" class="btn btn-danger btn-block btn-enroll">Записаться</a>
+                <a href="#" class="btn btn-danger btn-block btn-enroll" data-toggle="modal" data-target="#enrollModal">
+                  Записаться
+                </a>
                 <ul class="nav nav-pills nav-stacked nav-menu shadow mb-20">
                     <li class="active">
                         <a href="#" data-target-id="profile">
@@ -10,34 +12,42 @@
                             Мой профиль
                         </a>
                     </li>
+                    <% if current_user.has_role? :moderator %>
+                    <li>
+                        <a href="#" data-target-id="statistics">
+                            <i class="fa fa-table"></i>
+                            Расписание
+                        </a>
+                    </li>
+                    <%else %>
                     <li>
                         <a href="#" data-target-id="statistics">
                             <i class="fa  fa-line-chart"></i>
                             Статистика
                         </a>
                     </li>
+                    <%end%>
                     <li>
                         <a href="#" data-target-id="settings">
                             <i class="fa fa-pencil-square-o"></i>Настройки
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <i class="fa fa-sign-out"></i>
+                        <a href="<%= destroy_user_session_path%>" data-method="delete" data-confirm="Вы уверены?">
+                            <i class="glyphicon glyphicon-log-out"></i>
                             Выход
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="admin-content" id="profile">
-                <%= render "users/profile" %>
-            </div>
-            <div class="admin-content" id="statistics">
-                <%= render "users/statistics" %>
-            </div>
-            <div class="admin-content" id="settings"></div>
-            <div class="admin-content" id="schedule">
-                <%= render "users/schedule" %>
+            <div class="col-sm-9">
+                <div class="menu-content" id="profile">
+                    <%= render "users/profile" %>
+                </div>
+                <div class="menu-content" id="statistics">
+                    <%= render "users/statistics" %>
+                </div>
+                <div class="menu-content" id="settings"></div>
             </div>
         </div>
     </div>

@@ -1,10 +1,10 @@
 $(document).on('turbolinks:load', function() {
     $(document).ready(function()
     {
-        var navItems = $('.admin-menu li > a');
-        var navListItems = $('.admin-menu li');
-        var allWells = $('.admin-content');
-        var allWellsExceptFirst = $('.admin-content:not(:first)');
+        var navItems = $('.nav-menu li > a');
+        var navListItems = $('.nav-menu li');
+        var allWells = $('.menu-content');
+        var allWellsExceptFirst = $('.menu-content:not(:first)');
 
         allWellsExceptFirst.hide();
         navItems.click(function(e)
