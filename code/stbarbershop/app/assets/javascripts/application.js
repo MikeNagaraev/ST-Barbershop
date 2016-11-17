@@ -11,8 +11,11 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
+//= require jquery.timepicker.js
+//= require moment
+//= require fullcalendar
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-$('#enrollModal').modal({ keyboard: true })

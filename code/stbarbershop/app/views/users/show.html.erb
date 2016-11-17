@@ -5,30 +5,30 @@
                 <a href="#" class="btn btn-danger btn-block btn-enroll" data-toggle="modal" data-target="#enrollModal">
                   Записаться
                 </a>
-                <ul class="nav nav-pills nav-stacked nav-menu shadow mb-20">
+                <ul class="nav nav-pills nav-stacked nav-menu shadow mb-20" id="profile-menu">
                     <li class="active">
-                        <a href="#" data-target-id="profile">
+                        <a href="#profile" data-toggle="tab">
                             <i class="fa fa-user"></i>
                             Мой профиль
                         </a>
                     </li>
                     <% if current_user.has_role? :moderator %>
                     <li>
-                        <a href="#" data-target-id="statistics">
+                        <a href="#schedule"  data-toggle="tab">
                             <i class="fa fa-table"></i>
                             Расписание
                         </a>
                     </li>
                     <%else %>
                     <li>
-                        <a href="#" data-target-id="statistics">
+                        <a href="#statistics" data-toggle="tab">
                             <i class="fa  fa-line-chart"></i>
                             Статистика
                         </a>
                     </li>
                     <%end%>
                     <li>
-                        <a href="#" data-target-id="settings">
+                        <a href="#settings" data-toggle="tab">
                             <i class="fa fa-pencil-square-o"></i>Настройки
                         </a>
                     </li>
@@ -40,14 +40,17 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-sm-9">
-                <div class="menu-content" id="profile">
+            <div class="col-sm-9 tab-content">
+                <div class="menu-content tab-pane" id="profile">
                     <%= render "users/profile" %>
                 </div>
-                <div class="menu-content" id="statistics">
+                <div class="menu-content tab-pane" id="statistics">
                     <%= render "users/statistics" %>
                 </div>
-                <div class="menu-content" id="settings"></div>
+                <div class="menu-content tab-pane" id="schedule">
+                    <%= render "users/schedule" %>
+                </div>
+                <div class="menu-content tab-pane" id="settings"></div>
             </div>
         </div>
     </div>

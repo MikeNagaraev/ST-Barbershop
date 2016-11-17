@@ -1,0 +1,1 @@
+$('#enrollModal').modal({ keyboard: true })

@@ -58,3 +58,9 @@ gem 'cancancan'
 gem 'rolify'
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
+
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
+gem 'jquery-ui-rails'
+
+gem 'jquery-timepicker-rails'
