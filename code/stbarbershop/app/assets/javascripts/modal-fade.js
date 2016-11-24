@@ -1,1 +1,3 @@
-$('#enrollModal').modal({ keyboard: true })
+$(document).on('turbolinks:load', function() {
+  $('#enrollModal').modalSteps();
+})
